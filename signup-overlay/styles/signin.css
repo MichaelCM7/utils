@@ -22,6 +22,10 @@ form{
   padding-right: 30px;
 }
 
+hr{
+  margin: 0;
+}
+
 .btn-container{
   display: flex;
   align-items: center;
@@ -71,7 +75,7 @@ form{
 }
 
 .overlay-content{
-  padding: 30px 40px;
+  padding: 20px 40px;
   background-color: azure;
   border-radius: 10px;
   width: 350px;
@@ -96,7 +100,7 @@ form{
 .inputfield{
   font-size: 16px;
   padding: 8px 15px;
-  border: solid blue 2px;
+  border: solid black 2px;
   border-radius: 8px;
   width: 100%;
   background-color: azure;
@@ -154,7 +158,7 @@ form{
 
 .hr-text::before {
   content: '';
-  background: linear-gradient(to right, transparent, #818078, transparent);
+  background: linear-gradient(to right, transparent, black, transparent);
   position: absolute;
   left: 0;
   top: 50%;
@@ -168,15 +172,49 @@ form{
   color: black;
   padding: 0 .5em;
   line-height: 1.5em;
-  color: #818078;
+  color: black;
   background-color: azure;
 }
 
 .platform{
-  display: block;
+  display: grid;
+  position: relative;
+  grid-template-columns: 50px 1fr 50px;
+  justify-content:  center;
+  align-items: center;
   margin: 10px 0;
   padding: 8px 15px;
-  border: solid black 1px;
+  border: solid black 2px;
   border-radius: 8px;
   width: 100%;
+  background-color: white;
+  height: 43px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.platform:hover{
+  transform: translateY(-3px);
+  border-color: blue;
+}
+
+.platform p{
+  margin: 0;
+  font-size: 16px;
+  color: black;
+}
+
+.platform-icon{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.google-icon{
+  width: 25px;
+  height: 25px;
+}
+
+.apple-icon{
+  width: 18px;
+  height: 20px;
 }
