@@ -13,9 +13,9 @@
   </div>
   <div class="overlay">
     <div class="overlay-content">
-      <p class="title">Welcome</p>
-      <p class="subtitle">Sign In or Sign Up to continue</p>
-      <form action="">
+      <h1 class="title">Welcome</h1>
+      <h3 class="subtitle">Sign In or Sign Up to continue</h3>
+      <form id="sign-in-form" action="" method="post">
         <p class="field-title">Email</p>
         <div class="submit-container"><input class="inputfield" type="text" placeholder="Enter your email"></div>
         <p class="field-title">Password</p>
@@ -24,7 +24,7 @@
       <p>Forgot your password?<a class="links" href="">Click Here</a></p>
       <p>Don't have an account.<a class="links" href="">Sign Up</a></p>
       <div class="submit-container">
-        <button class="signin-submit">Sign In</button>
+        <button form="sign-in-form" type="submit" class="signin-submit" value="Sign In">Sign In</button>
       </div>
       <hr class="hr-text" data-content="or">
       <button class="platform google-sign-in">

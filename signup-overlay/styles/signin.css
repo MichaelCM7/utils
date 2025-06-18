@@ -3,7 +3,7 @@ html{
   font-size: 16px;
   padding: 0;
   margin: 0;
-  background-color: rgba(0, 255, 255, 0.6);
+  background-color: rgba(0, 255, 255, 0.4);
 }
 
 body{
@@ -31,7 +31,6 @@ hr{
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-
 }
 
 .signup-btn{
@@ -57,16 +56,13 @@ hr{
 }
 
 .overlay {
-  position: fixed; 
-  justify-items: center;
+  position: fixed;
   display: none;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 
@@ -75,11 +71,16 @@ hr{
 }
 
 .overlay-content{
-  padding: 20px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: azure;
+  padding: 5px 40px;
   border-radius: 10px;
-  width: 350px;
-  margin: 7px 0;
+  width: 90%;
+  max-width: 450px;
+  margin: 0;
 }
 
 .title{
@@ -217,4 +218,263 @@ hr{
 .apple-icon{
   width: 18px;
   height: 20px;
+}
+
+/* Small phones */
+@media screen and (max-width: 375px) {
+  .overlay-content {
+    padding: 14px 18px;
+    width: 95%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  .overlay-content {
+    padding: 18px 26px;
+    width: 90%;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .overlay-content {
+    width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    padding: 16px;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+}
+
+/* Large phones: iPhone XR, 12 Pro, 14 Pro Max, Galaxy S8+/S20 Ultra, Pixel 7 */
+@media screen and (min-width: 430px) and (max-width: 
+768px){
+  .overlay-content {
+    width: 85vw;
+    padding: 22px 32px;
+    max-height: 88vh;
+    overflow-y: auto;
+    border-radius: 14px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .inputfield {
+    font-size: 17px;
+  }
+
+  .signin-submit, .platform {
+    font-size: 16px;
+    height: 45px;
+  }
+}
+
+/* Z Fold5: 768px to 850px in portrait */
+@media screen and (min-width: 768px) and (max-width: 850px) {
+  .overlay-content {
+    max-width: 500px;
+    padding: 24px 36px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .inputfield {
+    font-size: 17px;
+  }
+
+  .signin-submit, .platform {
+    font-size: 16px;
+    height: 46px;
+  }
+
+  .platform-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .google-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .apple-icon {
+    width: 19px;
+    height: 21px;
+  }
+}
+
+/* Larger screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .overlay-content {
+    max-width: 420px;
+    padding: 22px 30px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+}
+
+/* Tablets: iPad Mini, iPad Air/Pro, Surface Pro */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .overlay-content {
+    max-width: 520px;
+    padding: 28px 40px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .inputfield {
+    font-size: 18px;
+  }
+
+  .signin-submit, .platform {
+    font-size: 17px;
+    height: 48px;
+  }
+
+  .platform-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .google-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .apple-icon {
+    width: 20px;
+    height: 22px;
+  }
+}
+
+/* iPad Pro 11” & 12.9” in landscape */
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .overlay-content {
+    max-width: 560px;
+    padding: 30px 44px;
+    border-radius: 18px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .inputfield {
+    font-size: 18px;
+  }
+
+  .signin-submit, .platform {
+    font-size: 18px;
+    height: 50px;
+  }
+
+  .platform-icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .google-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .apple-icon {
+    width: 21px;
+    height: 23px;
+  }
+}
+
+/* Foldables & Ultra-Wide Screens: ASUS Zenbook Fold */
+@media screen and (min-width: 1367px) {
+  .overlay-content {
+    max-width: 600px;
+    padding: 32px 50px;
+    border-radius: 18px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .inputfield {
+    font-size: 19px;
+  }
+
+  .signin-submit, .platform {
+    font-size: 18px;
+    height: 50px;
+  }
+}
+
+/* Extra large screens*/
+@media screen and (min-width: 1025px) {
+  .overlay-content {
+    max-width: 480px;
+    padding: 24px 36px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .platform {
+    font-size: 16px;
+    height: 42px;
+  }
 }
