@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/signin.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script defer src="../scripts/signin.js"></script>
   <title>Sign In Overlay</title>
 </head>
@@ -11,6 +12,7 @@
   <div class="btn-container">
     <button class="signup-btn">Sign In</button>
   </div>
+  <div class="main-content"></div>
   <div class="overlay">
     <div class="overlay-content">
       <h1 class="title">Welcome</h1>
@@ -27,7 +29,7 @@
         <button form="sign-in-form" type="submit" class="signin-submit" value="Sign In">Sign In</button>
       </div>
       <hr class="hr-text" data-content="or">
-      <button class="platform google-sign-in">
+      <button id="googleBtn" class="platform google-sign-in">
         <img src="../icons/google-icon.png" alt="Google Icon" class="platform-icon google-icon">
         <p>Sign in with Google</p>
       </button>
